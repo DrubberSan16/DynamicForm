@@ -1,5 +1,6 @@
 ﻿using BackForm.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace BackForm.Data.Repositories
@@ -16,6 +17,11 @@ namespace BackForm.Data.Repositories
         public async Task<IEnumerable<DataForm>> GetAllAsync()
         {
             return await _context.DataForms.ToListAsync();
+        }
+
+        public async Task<IEnumerable<DataForm>> GetByIdFormAsync(long id)
+        {
+            return await _context.DataForms.Where(d => d.IdForm.Equals(id)).ToListAsync();
         }
 
         public async Task<DataForm> GetByIdAsync(long id)

@@ -36,6 +36,19 @@ namespace BackForm.Controllers
             return Ok(dataForm);
         }
 
+        [HttpGet("formId/{id}")]
+        public async Task<ActionResult<DataForm>> GetDataByIdForm(long id)
+        {
+            var dataForm = await _unitOfWork.DataForms.GetByIdFormAsync(id);
+
+            if (dataForm == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(dataForm);
+        }
+
         [HttpPost]
         public async Task<ActionResult<DataForm>> PostDataForm(DataForm dataForm)
         {

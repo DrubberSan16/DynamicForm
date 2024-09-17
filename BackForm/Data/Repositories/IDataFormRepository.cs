@@ -7,6 +7,7 @@ namespace BackForm.Data.Repositories
     {
         Task<IEnumerable<DataForm>> GetAllAsync();
         Task<DataForm> GetByIdAsync(long id);
+        Task<IEnumerable<DataForm>> GetByIdFormAsync(long id);
         Task<IEnumerable<DataForm>> FindAsync(Expression<Func<DataForm, bool>> predicate);
         Task AddAsync(DataForm dataForm);
         void Update(DataForm dataForm);

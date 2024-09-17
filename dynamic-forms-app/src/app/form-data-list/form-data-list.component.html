@@ -1,0 +1,35 @@
+<div>
+  <button class="btn btn-primary add-new" (click)="return()">Regresar</button>
+  <h1>Datos del Formulario</h1>
+  <button class="btn btn-primary add-new" (click)="createData()">Agregar Nuevo Dato</button>
+  <table class="striped bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Datos</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{ item.id }}</td>
+        <td>
+          
+          <table class="sub-table" *ngIf="item.dataFrm">
+            <tr *ngFor="let key of objectKeys(item.dataFrm)">
+              <td><strong>{{ key }}:</strong></td>
+              <td>{{ item.dataFrm[key] }}</td>
+            </tr> 
+          </table>
+          <p *ngIf="!item.dataFrm">No hay datos disponibles.</p>
+        </td>
+        <td>{{ item.state }}</td>
+        <td>
+          <button class="btn btn-secondary" (click)="editData(item.id)">Editar</button>
+          <button class="btn btn-danger" (click)="deleteData(item.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackForm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6f6d9fb8b0e115dd762df67c25660f6e8785227")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackForm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackForm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

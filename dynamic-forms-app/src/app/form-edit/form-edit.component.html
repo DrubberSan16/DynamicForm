@@ -1,0 +1,40 @@
+<div>
+  <button class="btn btn-primary add-new" (click)="return()">Regresar</button>
+  <h1>{{ formId ? 'Editar Formulario' : 'Crear Formulario' }}</h1>
+  
+  <!-- Vincular el formGroup al formulario -->
+  <form [formGroup]="formForm" (ngSubmit)="save()">
+    <div class="form-group">
+      <label>Nombre:</label>
+      <input formControlName="nameForm" />
+    </div>
+    <div class="form-group">
+      <label>Descripción:</label>
+      <input formControlName="descriptionForm" />
+    </div>
+
+    <!-- Campos dinámicos -->
+    <div formArrayName="fields">
+      <div *ngFor="let field of fields.controls; let i = index" [formGroupName]="i" class="field-grid">
+        <div class="form-group">
+          <label>Nombre del Campo:</label>
+          <input formControlName="name" />
+        </div>
+        <div class="form-group">
+          <label>Tipo de Dato:</label>
+          <select formControlName="type">
+            <option value="text">Texto</option>
+            <option value="number">Número</option>
+            <option value="date">Fecha</option>
+          </select>
+        </div>
+        <div class="form-group remove-button">
+          <button type="button" (click)="removeField(i)">Eliminar Campo</button>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" (click)="addField()">Agregar Campo</button>
+    <button type="submit">Guardar</button>
+  </form>
+</div>

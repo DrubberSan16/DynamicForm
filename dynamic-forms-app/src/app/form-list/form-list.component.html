@@ -1,0 +1,29 @@
+<div>
+  <h1>Listado de Formularios</h1>
+  <button class="btn btn-primary add-new" (click)="createForm()">Crear Nuevo Formulario</button>
+  
+  <table class="striped bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let form of forms">
+        <td>{{ form.id }}</td>
+        <td>{{ form.nameForm }}</td>
+        <td>{{ form.descriptionForm }}</td>
+        <td>{{ form.state }}</td>
+        <td>
+          <button class="btn btn-secondary" (click)="editForm(form.id)">Editar</button>
+          <button class="btn btn-danger" (click)="deleteForm(form.id)">Eliminar</button>
+          <button class="btn btn-primary" (click)="openForm(form.id)">Abrir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
