@@ -1,0 +1,6 @@
+@BackForm_HostAddress = http://localhost:5191
+
+GET {{BackForm_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

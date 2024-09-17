@@ -1,0 +1,25 @@
+services:
+  backform:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=db;Database=BD_FORM;User=sa;Password=D123s456;TrustServerCertificate=true;
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfiledb
+    environment:
+      SA_PASSWORD: "D123s456"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1434:1433"
+    entrypoint:
+      - /opt/mssql/bin/sqlservr
+    restart: always
