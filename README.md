@@ -41,6 +41,20 @@ DynamicForm es un proyecto que permite crear y gestionar formularios dinámicos.
     ```bash
     npm install
     npm run start
+5. **URL Inicial**
+
+    Por defecto la URL incial es: http://{IP o HOST}:{PUERTO ASIGNADO}/forms
 
 5. **Evidencias**
+    ![alt text](/img/image.png)
+
+    ![alt text](/img/crearForm.png)
+
+    ![alt text](/img/editarForm.png)
+
+    ![alt text](/img/dataForm.png)
+
+    ![alt text](/img/crearData.png)
+
+    ![alt text](/img/editarData.png)
 
