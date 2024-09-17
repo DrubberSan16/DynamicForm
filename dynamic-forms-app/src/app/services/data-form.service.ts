@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataFormService {
-  private apiUrl = 'http://localhost:8080/api/dataForm';
+  private apiUrl = 'https://9nhrp5ml-8080.use2.devtunnels.ms/api/dataForm';
 
   constructor(private http: HttpClient) { }
 

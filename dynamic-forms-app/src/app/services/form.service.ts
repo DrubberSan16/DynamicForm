@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class FormService {
-  private apiUrl = 'http://localhost:8080/api/form';
+  private apiUrl = 'https://9nhrp5ml-8080.use2.devtunnels.ms/api/form';
 
   constructor(private http: HttpClient) { }
 

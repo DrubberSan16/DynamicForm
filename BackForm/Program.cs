@@ -25,7 +25,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigin",
         policy =>
         {
-            policy.WithOrigins("http://localhost:8080")
+            policy.WithOrigins("http://localhost:8080,https://9nhrp5ml-4200.use2.devtunnels.ms")
                   .AllowAnyHeader()
                   .AllowAnyMethod()
                   .AllowAnyOrigin()

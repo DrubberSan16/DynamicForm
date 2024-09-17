@@ -71,6 +71,7 @@ export class FormDataEditComponent implements OnInit {
     const dataId = +this.route.snapshot.paramMap.get('dataId')!;
     
     const formData = {
+      id: dataId,
       idForm: idForm,
       dataFrm: JSON.stringify(this.formGroup.value),
       state: true,
