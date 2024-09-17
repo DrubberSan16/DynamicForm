@@ -45,7 +45,7 @@ DynamicForm es un proyecto que permite crear y gestionar formularios dinámicos.
 
     Por defecto la URL incial es: http://{IP o HOST}:{PUERTO ASIGNADO}/forms
 
-5. **Evidencias**
+6. **Evidencias**
     ![alt text](/img/image.png)
 
     ![alt text](/img/crearForm.png)
@@ -58,3 +58,6 @@ DynamicForm es un proyecto que permite crear y gestionar formularios dinámicos.
 
     ![alt text](/img/editarData.png)
 
+7. **URL Pruebas**
+
+    https://9nhrp5ml-4200.use2.devtunnels.ms/
